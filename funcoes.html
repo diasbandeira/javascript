@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <title>Funções</title>
+</head>
+<body>
+<script>
+    var square = function(x){
+        return x * x;
+    };
+    console.log(square(2));
+
+    var makeNoise = function(){
+        console.log("Pling!");
+    }
+    makeNoise();
+    //retorno: Pling!
+
+    var power = function(base, exponent){
+        var result = 1;
+        for (var count = 0; count < exponent; count++)
+            result *= base;
+        return result;
+    };
+
+    console.log(power(2,10));
+    // retorno: 1024
+
+    var x = "outside";
+
+    var f1 = function(){
+        var x = "inside f1";
+    };
+
+    console.log(x);
+    //Retorno: outside
+
+    var f2 = function(){
+        x = "inside f2";
+    };
+    f2();
+    console.log(x);
+    //Retorno: inside f2
+
+    //Escopo aninhado
+    var landscape = function(){
+        var result = "";
+        var flat = function(size){
+            for (var count = 0; count < size; count++)
+                result +="_";
+        };
+        var mountain = function(size){
+            result +="/";
+            for (var count = 0; count <= size; count++)
+                result +="'";
+            result +="\\";
+        };
+        flat(3);
+        mountain(4);
+        flat(6);
+        mountain(1);
+        flat(1);
+        return result;
+
+    }
+    console.log(landscape());
+
+
+    /* var launchMissiles = function(value) {
+        missileSystem.launch("now");
+    };
+    if (safeMode)
+        launchMissiles = function(value) {console.log("faça alguma coisa");}; */
+    
+    console.log("O futuro diz:", future());
+
+    function future(){
+        return "Nos não teremos carros voadores";
+    }
+
+
+    function greet(who){
+        console.log("Hello " + who);
+    }
+    greet("Harry");
+    console.log("Bye");
+
+    function chicken(){
+        return egg();
+    }
+    function egg(){
+        return chicken();
+    }
+    //console.log(chicken() + "came first");
+
+    //alert("A");
+
+    function power2(base, exponent){
+        if (exponent == undefined)
+            exponent = 2;
+        var result = 1;
+
+
+        for (var count = 0; count < exponent; count++){
+            result *= base;
+            
+        }
+       
+        return result;
+
+    }
+    console.log(power2(4));
+
+    console.log(power2(4,3));
+
+    console.log(1,"A",2 ,"B");
+
+    function wrapValue(n){
+        var localVariable = n;
+        return function() { return localVariable;};
+    }
+
+    var wrap1 = wrapValue(1);
+    var wrap2 = wrapValue(2);
+    console.log(wrap1());
+
+    console.log(wrap2());
+
+    function multiplier(factor){
+        return function(number) {
+            return number * factor;
+        };
+    }
+    var twice = multiplier(2);
+    console.log(twice(5));
+
+    function power3(base , exponent) {
+        if (exponent == 0)
+            return 1;
+        else 
+            return base * power3(base, exponent - 1);
+    }
+    console.log(power(2,2));
+
+    function findSolution(target){
+        function find(start, history){
+            if (start == target)
+                return history
+            else if (start > target)
+                return null
+            else 
+                return find(start + 5, "(" + history + " + 5)") || 
+                       find(start * 3, "(" + history + " * 3)");
+        }
+        return find(1, "1");
+    }
+    console.log(findSolution(16));
+
+    function printFarmInventory(cows, chickens){
+        var cowString = String(cows);
+        while (cowString.length < 3)
+            cowString = "0" + cowString;
+        console.log(cowString + " Cows");
+        var chickenString = String(chickens);
+        while (chickenString.length < 3)
+            chickenString = "0" + chickenString;
+        console.log(chickenString + " Chickens");
+    }
+    printFarmInventory(7,11);
+
+    function zeroPad(number , width){
+        var string = String(number);
+        while (string.length < width)
+            string = "0" + string;
+        return string;
+    }
+
+    function printFarmInventory2(cows, chickens, pigs){
+        console.log(zeroPad(cows, 3) + " Cows");
+        console.log(zeroPad(chickens, 3) + " Chickens");
+        console.log(zeroPad(pigs, 3) + " Pigs");
+    }
+    printFarmInventory2(7,16,103);
+
+    function min(n1, n2){
+        if (n1 < n2)
+            return n1;
+        else   
+            return n2;
+    }
+    console.log(min(1001,1000));
+
+    console.log(min(1,7));
+    
+    console.log(min(7,7));
+
+    function isEven(num){
+        var valorTemp = num;
+        while ( valorTemp > 0){
+            valorTemp = num - 2;
+        }
+        console.log(valorTemp);
+    }
+    
+
+    // function multiplier(factor){
+    //     return function(number) {
+    //         return number * factor;
+    //     };
+    // }
+
+    console.log(isEven(3));
+    //console.log(isEven(50));
+    //console.log(isEven(75));
+    //console.log(isEven(-1));
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

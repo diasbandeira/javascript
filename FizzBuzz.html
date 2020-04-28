@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <title>Fizz Buzz</title>
+</head>
+<body>
+<script>
+    var numero = "";
+	for (var count = 1; count <= 100; count++){
+        if (count % 5 == 0 && count % 3 == 0 )
+            console.log("FizzBuzz");
+        else if (count % 5 == 0 && count % 3 != 0 )
+            console.log("Buzz");
+        else if  (count % 3 == 0)
+            console.log("Fizz");
+        else 
+            console.log(String(count));
+    }
+
+</script>
+</body>
+</html>

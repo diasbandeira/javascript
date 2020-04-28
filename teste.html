@@ -1,0 +1,131 @@
+<html>
+<head></head>
+<body>
+<script>
+	//alert("TEste");
+	console.log(typeof 4.5);
+	
+	console.log(typeof "X");
+	
+	console.log(-(10 - 2));
+	
+	console.log(10 > 2);
+	
+	console.log(10 < 2);
+	
+	console.log(true ? 1 : 2);
+	
+	console.log(false ? 1 : 2);
+
+	console.log("-----");
+	
+	console.log( 8 * null);
+	
+	console.log( "5" - 1);
+
+	console.log( "5" + 1);
+
+	console.log( "five" * 2);
+
+	console.log( false == 0);
+	var ten = 10;
+	console.log(ten * ten);
+	var ten = 5;
+	console.log(ten * ten);
+
+	var luisDebt = 140;
+	luisDebt = luisDebt - 35;
+	console.log(luisDebt);
+
+	//alert("Teste alert!");
+
+	console.log("Luiz deve o valor de: ", luisDebt);
+
+	console.log(Math.max(22,4));
+
+	console.log(Math.min(22,4) + 100);
+
+	var resp = confirm("Vc confirma?");
+	console.log(resp);
+	
+	var texto = prompt("Digite um texto:", "aqui!!");
+	console.log(texto);
+
+	var numero = Number(prompt("Digite um numero:"));
+	console.log("O quadrado do numero digitado é: " + numero * numero);
+
+	
+	var numero = Number(prompt("Digite um numero: "));
+	if (!isNaN(numero))
+		alert("O quadrado do numero é: " + numero * numero);
+	else
+		alert ("Você precisa digitar um numero!!");
+
+	
+	var numero = Number(prompt("Digite um numero: ", "0"));
+	if (numero < 10)
+		alert("Pequeno");
+	else if (numero <100)
+		alert("Medio");
+	else 
+		alert("Large");
+
+	var numero = 0;
+	while (numero <=12){
+		console.log(numero);
+		numero = numero + 2;
+	}
+
+	var result = 1;
+	var counter = 0;
+	while (counter < 10){
+		result = result * 2;
+		counter = counter + 1;
+	}
+	console.log(result);
+
+
+	do {
+		var name = prompt("Who are you?");
+	}while (!name);
+	console.log(name);
+
+	for (var number = 0; number <=12 ; number = number + 2)
+		console.log(number);
+
+	var result = 1;
+	for (var counter = 0; counter < 10; counter = counter + 1)
+		result = result * 2;
+	console.log(result);
+
+	for (var current = 20; ;current++){
+		if (current % 7 == 0)
+			break;
+	}
+	console.log(current);
+
+	for (var number = 0; number <=12; number +=2)
+		console.log(number);
+
+	for (var number = 0; number <=12; number++)
+		console.log(number);
+
+	switch(prompt("Como esta o tempo?")){
+		case "chuva":
+			console.log("Pegue uma sombrinha");
+			break;
+		case "sol":
+			console.log("Vista roupas leves");
+		case "nublado":
+			console.log("Sair de casa");
+			break;
+		default:
+			console.log("Valor nao encontrado. Digite um novo valor!");
+			break;
+	}
+
+	//Exercicios pagina 25. 
+	// Tabuleiro de Xadrez
+</script>
+</body>
+<html>
