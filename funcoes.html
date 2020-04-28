@@ -194,25 +194,31 @@
     
     console.log(min(7,7));
 
+    
+    
+    function multiplier(factor){
+        return function(number) {
+            return number - factor;
+        };
+    }
+    var twice = multiplier(2);
+    console.log(twice(5));
+        
     function isEven(num){
-        var valorTemp = num;
-        while ( valorTemp > 0){
-            valorTemp = num - 2;
-        }
-        console.log(valorTemp);
+        if (num == 1 )
+            return false;              
+        else if(num == 0)
+            return true;
+        else if (num < 0)
+            return isEven(num + 2);
+        else
+            return isEven(num - 2);
     }
     
-
-    // function multiplier(factor){
-    //     return function(number) {
-    //         return number * factor;
-    //     };
-    // }
-
-    console.log(isEven(3));
-    //console.log(isEven(50));
+    //console.log(isEven(3));
+    // console.log(isEven(50));
     //console.log(isEven(75));
-    //console.log(isEven(-1));
+    console.log(isEven(-9990));
 
 
 

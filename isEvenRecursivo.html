@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <title>Funções</title>
+</head>
+<body>
+<script>    
+    function isEven(num){
+        if (num == 1 )
+            return false;              
+        else if(num == 0)
+            return true;
+        else if (num < 0)
+            return isEven(num + 2);
+        else
+            return isEven(num - 2);
+    }
+    
+    console.log(isEven(3));
+    console.log(isEven(50));
+    console.log(isEven(75));
+    console.log(isEven(-9990));
+
+
+</script>
+</body>
+</html>

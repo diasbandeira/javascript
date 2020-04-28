@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <title>Funções</title>
+</head>
+<body>
+<script>    
+    function countBs(palavra){
+        var cont = 0;
+        for (var i = 0; i < palavra.length; i +=1){
+            if (palavra.charAt(i) == "B")
+                cont +=1;
+        }
+        return cont;
+ 
+        //for (var number = 0; number <=12; number +=2)
+		//console.log(number);
+            
+    }
+    function countChar(palavra, letra){
+        var cont = 0;
+        for (var i = 0; i < palavra.length; i +=1){
+            if (palavra.charAt(i) == letra)
+                cont += 1;
+        }
+        return cont;
+    }
+
+    console.log(countBs("BBBBBBBCcB"));
+    //2
+    console.log(countChar("kakkelak", "k"));
+    //4
+    console.log(countChar("aaacc", "a"));
+    
+    
+</script>
+</body>
+</html>
