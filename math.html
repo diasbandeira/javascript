@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <title>Funções</title>
+</head>
+<body>
+<script>
+  //funçoes do objeto math.
+  
+  console.log(Math.PI);
+  
+  function randomPointOnCircle(radius){
+    var angle = Math.random() * 2 * Math.PI;
+    return {x: radius * Math.cos(angle),
+            y: radius * Math.sin(angle)};
+  }
+  console.log(randomPointOnCircle(2));
+
+  function randomPointOnCircle(radius) {
+var angle = Math.random() * 2 * Math.PI;
+return {x: radius * Math.cos(angle),
+y: radius * Math.sin(angle)};
+}
+console.log(randomPointOnCircle(2));
+
+//Math.random - gera um numero aleatro entre 0 e 1;
+console.log(Math.random());
+
+//Math.floor - arredonda um numero para inteiro para baixo.
+//Para gerar um numero inteiro, utilizamos o numero gerado pelo random e arredondamos o valor com floor.
+console.log(Math.floor(Math.random() * 10));
+
+//Math.ceil - arredonda para o maior inteiro.
+//Math.round - arredonda para o numero mais proximo.
+
+
+function range(start, fim){
+  var listaDeNumeros = [];
+  
+  //console.log(start);
+  //console.log(fim);
+  if (arguments.length < 3) {
+    for (var i = start; i <= fim ; i++){
+      //console.log(i);
+      listaDeNumeros.push(i);
+    }
+    return listaDeNumeros
+  }else if (arguments[2] < 0){
+    var incremento = arguments[2];
+    for (var i = start; i >= fim ; i+=incremento){
+      listaDeNumeros.push(i);
+    }
+    return listaDeNumeros
+  } 
+  var incremento = arguments[2];
+  for (var i = start; i < fim ; i+=incremento){
+    listaDeNumeros.push(i);
+  }
+  return listaDeNumeros
+}
+function sum(lista){
+  var total = 0;
+  for (var valor in lista){
+    total += lista[valor];
+  }
+  return total
+}
+
+
+console.log(range(1, 10));
+// → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+console.log(range(5, 2, -1));
+// → [5, 4, 3, 2]
+
+console.log(range(3, 6, 2));
+// → [3, 5]
+
+console.log(sum(range(1, 10)));
+// → 55
+
+
+
+</script>
+</body>
+</html>

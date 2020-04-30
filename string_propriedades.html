@@ -33,9 +33,22 @@
   console.log(string.charAt(0));
   
   //Buscar elemento como em um array.
-  console.log(string[1]);
+  console.log(string[0]);
+  
+  //Arguments variavel contem os argumentos repassados na função.
+  function noArguments(){}
+  noArguments(1,2,3);
 
+  function threeArguments(a,b,c){  }
 
+  threeArguments();
+  
+  function argumentCounter(){
+    console.log("You gave me", arguments.length, "arguments");
+  }
+
+  argumentCounter("Straw man", "Tautology", "Ad hominem");
+  
 </script>
 </body>
 </html>
